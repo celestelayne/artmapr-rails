@@ -6,12 +6,12 @@ ArtMapr is an art discovery web application that uses your preferences (via ‘c
 + allow people to find a community of art-lovers with similar tastes
 + provide a way for people to explore art together.
 
-...Ruby version
-	- Ruby 2.2.1
+1. Ruby version
++ Ruby 2.2.1
 
-...Technologies Used
-	- Ruby
-	- Rails
-	- PostGres
+2. Technologies Used
++ Ruby
++ Rails
++ PostGres
 
 
