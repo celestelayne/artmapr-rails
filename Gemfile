@@ -2,26 +2,31 @@ source 'https://rubygems.org'
 # tell which version of ruby to use
 ruby "2.2.1"
 
-group :development do
-	gem 'sqlite3'
-end
-
-group :development do
+group :production do
 	# Use postgresql as the database for Active Record
 	gem 'pg'
 	# modifies the way Rails works to suit Heroku
 	gem 'rails_12factor'
 end
 
+# Gems used only for assets and not required
+# in production environments by default.
+group :assets do
+	# Use CoffeeScript for .coffee assets and views
+	gem 'coffee-rails', '~> 4.1.0'
+	# Use SCSS for stylesheets
+	gem 'sass-rails', '~> 5.0'
+	# Use Uglifier as compressor for JavaScript assets
+	gem 'uglifier', '>= 1.3.0'
+	# https://github.com/twbs/bootstrap-sass
+	gem 'bootstrap-sass', '~> 3.3.5'
+	# Automatically adds the proper vendor prefixes to your CSS when compiled
+	gem 'autoprefixer-rails'
+end
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.1'
 
-# Use SCSS for stylesheets
-gem 'sass-rails', '~> 5.0'
-# Use Uglifier as compressor for JavaScript assets
-gem 'uglifier', '>= 1.3.0'
-# Use CoffeeScript for .coffee assets and views
-gem 'coffee-rails', '~> 4.1.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
@@ -56,6 +61,8 @@ group :development, :test do
   gem 'better_errors'
   gem 'binding_of_caller'
   gem 'annotate'
+  # gets database to work on Heroku, which uses a different database
+  gem 'sqlite3'
 
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
