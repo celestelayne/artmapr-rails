@@ -11,7 +11,7 @@ end
 
 # Gems used only for assets and not required
 # in production environments by default.
-group :assets do
+
 	# Use CoffeeScript for .coffee assets and views
 	gem 'coffee-rails', '~> 4.1.0'
 	# Use SCSS for stylesheets
@@ -22,7 +22,9 @@ group :assets do
 	gem 'bootstrap-sass', '~> 3.3.5'
 	# Automatically adds the proper vendor prefixes to your CSS when compiled
 	gem 'autoprefixer-rails'
-end
+
+# https://github.com/plataformatec/simple_form
+gem 'simple_form'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.1'
