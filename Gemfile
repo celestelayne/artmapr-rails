@@ -1,6 +1,5 @@
 source 'https://rubygems.org'
 # tell which version of ruby to use
-ruby "2.2.1"
 
 group :production do
 	# Use postgresql as the database for Active Record
@@ -11,7 +10,7 @@ end
 
 # Gems used only for assets and not required
 # in production environments by default.
-group :assets do
+
 	# Use CoffeeScript for .coffee assets and views
 	gem 'coffee-rails', '~> 4.1.0'
 	# Use SCSS for stylesheets
@@ -22,7 +21,9 @@ group :assets do
 	gem 'bootstrap-sass', '~> 3.3.5'
 	# Automatically adds the proper vendor prefixes to your CSS when compiled
 	gem 'autoprefixer-rails'
-end
+
+# https://github.com/plataformatec/simple_form
+gem 'simple_form'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.1'
@@ -40,7 +41,7 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 
 # Use ActiveModel has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
+gem 'bcrypt', '~> 3.1.7'
 
 # Use Unicorn as the app server
 # gem 'unicorn'
@@ -70,4 +71,3 @@ group :development, :test do
   # Spring is a Rails application preloader. It speeds up development by keeping your application running in the background so you don't need to boot it every time you run a test, rake task or migration. Read more: https://github.com/rails/spring
   gem 'spring'
 end
-
