@@ -1,6 +1,5 @@
 source 'https://rubygems.org'
 # tell which version of ruby to use
-ruby "2.2.1"
 
 group :production do
 	# Use postgresql as the database for Active Record
@@ -42,7 +41,7 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 
 # Use ActiveModel has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
+gem 'bcrypt', '~> 3.1.7'
 
 # Use Unicorn as the app server
 # gem 'unicorn'
@@ -72,4 +71,3 @@ group :development, :test do
   # Spring is a Rails application preloader. It speeds up development by keeping your application running in the background so you don't need to boot it every time you run a test, rake task or migration. Read more: https://github.com/rails/spring
   gem 'spring'
 end
-

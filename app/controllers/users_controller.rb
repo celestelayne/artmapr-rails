@@ -1,9 +1,7 @@
 class UsersController < ApplicationController
-	require 'uri'
 
 	def index
 		@users = User.all
-		render :index
 	end
 
 	def new
@@ -18,9 +16,8 @@ class UsersController < ApplicationController
 	end
 
 	def create
-		new_user = params.require(:user).permit(:first_name, :last_name, :email, :password)
-		user = User.create(new_user)
-		# redirect to profile page
+		user = User.create(user_params)
+			# redirect to profile page
 		redirect_to '/users'
 	end
 
@@ -30,17 +27,10 @@ class UsersController < ApplicationController
 		render :edit
 	end
 
-	def update
-		user_id = params[:id]
-		user = User.find(user_id)
+	private
 
-		# get updated data
-		updated_attributes = params.require(:user).permit(:first_name, :last_name, :email, :password)
-		# update the user
-		user.update_attributes(updated_attributes)
-
-		# redirect to show
-		redirect_to '/users/#{user_id}'
+	def user_params
+		params.require(:user).permit(:first_name, :last_name, :email, :password)
 	end
 
 end
