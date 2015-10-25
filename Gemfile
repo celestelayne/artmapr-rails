@@ -72,5 +72,7 @@ group :development, :test do
   gem 'spring'
 	# Rspec allows us to write rests for rails
 	gem 'rspec-rails'
+	gem 'capybara', '~> 2.5'
+	gem 'shoulda-matchers', '~> 3.0'
 
 end

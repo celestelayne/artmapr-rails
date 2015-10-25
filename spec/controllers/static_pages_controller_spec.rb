@@ -1,4 +1,6 @@
 require 'rails_helper'
+require 'spec_helper'
+require 'capybara/rspec'
 
 RSpec.describe StaticPagesController, type: :controller do
 
