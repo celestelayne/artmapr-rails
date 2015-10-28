@@ -1,0 +1,7 @@
+<div>
+	<%= simple_form_for @user, url: '/sessions', method: 'post' {class:'form-horizontal'} do |form| %>
+	  <%= form.input :email, placeholder: 'user@domain.com' %>
+	  <%= form.input :password, label: 'Password' %>
+	  <%= form.button :submit 'Sign In' %>
+	<% end %>
+</div>
