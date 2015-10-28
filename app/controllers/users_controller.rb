@@ -16,7 +16,7 @@ class UsersController < ApplicationController
 	end
 
 	def create
-		user = User.create(user_params)
+		@user = User.create(user_params)
 			# redirect to profile page
 		redirect_to '/users'
 	end

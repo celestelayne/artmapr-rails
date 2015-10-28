@@ -70,4 +70,9 @@ group :development, :test do
 
   # Spring is a Rails application preloader. It speeds up development by keeping your application running in the background so you don't need to boot it every time you run a test, rake task or migration. Read more: https://github.com/rails/spring
   gem 'spring'
+	# Rspec allows us to write rests for rails
+	gem 'rspec-rails'
+	gem 'capybara', '~> 2.5'
+	gem 'shoulda-matchers', '~> 3.0'
+
 end
